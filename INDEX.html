@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tia 職涯諮詢室 ｜ 理性梳理 × 溫柔陪伴，找回職涯與人生主導權</title>
+  <meta name="description" content="Tia 職涯諮詢師 — 10年外商實戰經驗，職游 CNC 認證。專注文組生、行銷、業務、PM 與職業婦女的轉職策略、履歷優化與一對一職涯梳理。">
+  
+  <!-- Google Fonts: Noto Serif TC (Editorial Warmth) & Plus Jakarta Sans / Noto Sans TC (Clean UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@400;600;700;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tailwind Configuration for Editorial Warmth Design System -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: {
+              50: '#FDFBF9',
+              100: '#FAF8F5',
+              200: '#F5F1EB',
+              300: '#ECE6DC',
+              400: '#DDD5C7'
+            },
+            terracotta: {
+              50: '#FDF7F5',
+              100: '#F9ECE7',
+              200: '#F2D7CD',
+              500: '#C26346',
+              600: '#B85D43',
+              700: '#9E4C35',
+              800: '#7E3B29'
+            },
+            forest: {
+              500: '#435B51',
+              600: '#354A41',
+              700: '#2A3C34'
+            },
+            charcoal: {
+              800: '#3A3834',
+              900: '#272624',
+              950: '#1D1C1B'
+            },
+            warmgray: {
+              400: '#A39E96',
+              500: '#8A857D',
+              600: '#706B64'
+            }
+          },
+          fontFamily: {
+            serif: ['"Noto Serif TC"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '"Noto Sans TC"', 'sans-serif'],
+          },
+          boxShadow: {
+            'soft': '0 8px 30px rgba(60, 52, 42, 0.04)',
+            'elevated': '0 16px 40px rgba(60, 52, 42, 0.07)',
+            'subtle': '0 2px 10px rgba(60, 52, 42, 0.03)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS for Editorial Polish & Smooth Dynamics -->
+  <style>
+    ::selection {
+      background-color: #F2D7CD;
+      color: #272624;
+    }
+    
+    /* Paper Grain Texture */
+    .bg-paper {
+      background-color: #FAF8F5;
+      background-image: radial-gradient(#E8E2D8 0.75px, transparent 0.75px);
+      background-size: 24px 24px;
+    }
+
+    /* Subtle quote watermark */
+    .quote-mark::before {
+      content: '“';
+      font-family: "Noto Serif TC", serif;
+      position: absolute;
+      top: -25px;
+      left: -10px;
+      font-size: 5rem;
+      color: #EFE9DF;
+      line-height: 1;
+      z-index: 0;
+      pointer-events: none;
+    }
+    
+    /* Smooth card hover lift */
+    .card-hover {
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 35px rgba(60, 52, 42, 0.08);
+      border-color: #DDD5C7;
+    }
+
+    /* Editorial Tag Style */
+    .editorial-tag {
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body class="bg-paper text-charcoal-900 font-sans antialiased selection:bg-terracotta-200 selection:text-charcoal-900">
+
+  <!-- Navigation Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md bg-cream-100/90 border-b border-cream-300/80">
+    <div class="max-w-6xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo / Signature -->
+      <a href="#" class="group flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-terracotta-100 text-terracotta-700 flex items-center justify-center font-serif text-xl font-bold border border-terracotta-200 transition-transform group-hover:scale-105">
+          T
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif text-lg font-bold tracking-tight text-charcoal-900 group-hover:text-terracotta-600 transition-colors">Tia.careerpath</span>
+          <span class="text-[11px] tracking-widest text-warmgray-500 uppercase font-medium">職涯導航諮詢師</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#about" class="text-sm font-medium text-warmgray-600 hover:text-charcoal-900 transition-colors">關於 Tia</a>
+        <a href="#services" class="text-sm font-medium text-warmgray-600 hover:text-charcoal-900 transition-colors">諮詢服務</a>
+        <a href="#process" class="text-sm font-medium text-warmgray-600 hover:text-charcoal-900 transition-colors">引導流程</a>
+        <a href="#testimonials" class="text-sm font-medium text-warmgray-600 hover:text-charcoal-900 transition-colors">學員心得</a>
+        <a href="#contact" class="px-5 py-2.5 rounded-full bg-charcoal-900 hover:bg-terracotta-600 text-cream-50 text-sm font-medium transition-all shadow-subtle hover:shadow-soft">
+          預約諮詢
+        </a>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobileMenuBtn" aria-label="切換選單" class="md:hidden p-2 text-charcoal-900 focus:outline-none">
+        <svg id="hamburgerIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-cream-50 border-b border-cream-300 px-6 py-6 space-y-4">
+      <a href="#about" class="mobile-link block text-base font-medium text-charcoal-900 hover:text-terracotta-600 py-1">關於 Tia</a>
+      <a href="#services" class="mobile-link block text-base font-medium text-charcoal-900 hover:text-terracotta-600 py-1">諮詢服務</a>
+      <a href="#process" class="mobile-link block text-base font-medium text-charcoal-900 hover:text-terracotta-600 py-1">引導流程</a>
+      <a href="#testimonials" class="mobile-link block text-base font-medium text-charcoal-900 hover:text-terracotta-600 py-1">學員心得</a>
+      <div class="pt-2">
+        <a href="#contact" class="mobile-link block w-full text-center py-3 rounded-xl bg-charcoal-900 text-cream-50 text-sm font-medium hover:bg-terracotta-600 transition-colors">
+          預約一對一諮詢
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 1. Hero Section -->
+  <section class="pt-32 lg:pt-40 pb-20 md:pb-28 overflow-hidden relative">
+    <div class="max-w-6xl mx-auto px-6 lg:px-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+        
+        <!-- Hero Text Content -->
+        <div class="lg:col-span-7 space-y-8">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cream-200/80 border border-cream-300 text-warmgray-600">
+            <span class="w-2 h-2 rounded-full bg-terracotta-500 animate-pulse"></span>
+            <span class="editorial-tag text-xs font-semibold text-charcoal-800">CAREER CONSULTING & NAVIGATION</span>
+          </div>
+
+          <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[2.9rem] leading-[1.3] text-charcoal-950 font-bold tracking-tight">
+            兼具<span class="text-terracotta-600 font-normal italic">理性梳理</span>與<span class="text-terracotta-600 font-normal italic">溫柔陪伴</span>，<br class="hidden sm:block">
+            陪你找回職場與人生的主導權。
+          </h1>
+
+          <p class="text-base sm:text-lg text-warmgray-600 leading-relaxed font-normal max-w-xl">
+            職業倦怠、迷茫停滯、渴望轉職卻不知從何著手？擁有 10 年外商實戰與深度諮詢經驗，我陪你接住焦慮、抽絲剝繭釐清卡關盲點，將模糊的渴望化為具體可落實的行動地圖。
+          </p>
+
+          <!-- Action CTA Group -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+            <a href="#contact" class="inline-flex justify-center items-center px-7 py-3.5 rounded-full bg-terracotta-600 hover:bg-terracotta-700 text-cream-50 font-medium text-base transition-all shadow-soft hover:shadow-elevated hover:scale-[1.02] text-center">
+              預約一對一諮詢
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+            <a href="#services" class="inline-flex justify-center items-center px-6 py-3.5 rounded-full border border-cream-300 hover:border-warmgray-500 bg-cream-50 text-charcoal-800 font-medium text-base hover:bg-cream-200 transition-all text-center">
+              探索服務項目
+            </a>
+          </div>
+
+          <!-- Quick Badges & Credibility Bar -->
+          <div class="pt-6 border-t border-cream-300/80 flex flex-wrap items-center gap-y-3 gap-x-6 text-xs text-warmgray-600">
+            <div class="flex items-center gap-2">
+              <span class="text-terracotta-600 font-semibold">✓</span>
+              <span>10 年外商職場實戰歷練</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-terracotta-600 font-semibold">✓</span>
+              <span>職游 CNC 職涯導航認證</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-terracotta-600 font-semibold">✓</span>
+              <span>Podcast《沒上班電台》主持</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Visual / Editorial Magazine Composition -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            
+            <!-- Atmospheric background layer -->
+            <div class="absolute -top-6 -left-6 w-full h-full rounded-3xl bg-terracotta-100/60 -rotate-2"></div>
+            
+            <!-- Main Editorial Portrait Frame -->
+            <div class="relative rounded-3xl overflow-hidden bg-cream-200 border border-cream-300 shadow-elevated">
+              <img 
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=80" 
+                alt="Tia 職涯諮詢師" 
+                class="w-full h-[450px] object-cover object-top filter contrast-[0.98] brightness-100"
+                onerror="this.src='https://placehold.co/600x800/FAF8F5/272624?text=Tia+Career+Coach'"
+              />
+              
+              <!-- Subtle gradient overlay -->
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950/40 via-transparent to-transparent"></div>
+
+              <!-- Floating badge on photo -->
+              <div class="absolute bottom-5 left-5 right-5 p-4 rounded-2xl bg-cream-50/95 backdrop-blur-md border border-cream-200 shadow-soft">
+                <p class="font-serif text-sm font-semibold text-charcoal-900">「職涯不是百米衝刺，而是為自己設計理想生活的過程。」</p>
+                <p class="text-[11px] text-warmgray-500 mt-1">— Tia，陪你走出卡關迴圈</p>
+              </div>
+            </div>
+
+            <!-- Floating Stamp / Highlight -->
+            <div class="absolute -bottom-4 -right-4 bg-forest-500 text-cream-50 rounded-2xl p-4 shadow-elevated hidden sm:flex items-center gap-3 max-w-[200px] border border-forest-600">
+              <div class="text-2xl">🌱</div>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-wider text-cream-200">陪伴與賦能</p>
+                <p class="text-xs text-cream-100 mt-0.5">重拾前進的篤定感</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. About Me Section -->
+  <section id="about" class="py-24 bg-cream-50 border-y border-cream-300/80 relative">
+    <div class="max-w-6xl mx-auto px-6 lg:px-10">
+      
+      <!-- Section Header -->
+      <div class="max-w-2xl mb-16">
+        <span class="editorial-tag text-terracotta-600 font-semibold">ABOUT TIA</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-charcoal-950 font-bold mt-2 tracking-tight">
+          文組生的跨界突破，<br class="hidden sm:block">轉化為陪你前行的力量。
+        </h2>
+        <div class="w-12 h-0.5 bg-terracotta-500 mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left Story & Philosophy -->
+        <div class="lg:col-span-7 space-y-6 text-warmgray-600 text-base sm:text-lg leading-relaxed">
+          <p class="text-charcoal-900 font-medium text-lg sm:text-xl font-serif">
+            嗨，我是 Tia。一個曾經也歷經無數次職涯焦慮與自我懷疑的「純文組生」。
+          </p>
+          <p>
+            沒有光鮮亮麗的商管或理工背景，我憑藉著對人性的敏銳洞察與持續打磨的邏輯架構，在外商 FMCG 實戰深耕超過 10 年，一路從基層跨界突圍。這段旅程讓我深知：<strong class="text-charcoal-900 font-semibold">文組生不是沒有價值，而是往往缺乏一套將隱性優勢「具象化與商業化」的語言。</strong>
+          </p>
+          <p>
+            現在的我，是職游認證的 CNC 職涯導航諮詢師，同時經營 Podcast《沒上班電台》。在我的諮詢室裡，沒有居高臨下的指點，只有<strong class="text-terracotta-600 font-semibold">「理性結構化梳理」</strong>與<strong class="text-terracotta-600 font-semibold">「溫柔傾聽同理」</strong>的交會。
+          </p>
+          <p>
+            我深信每個人都有自己的步調，我的任務是幫你把散落一地的經驗碎片拼湊整齊，在迷霧中點亮那一盞讓你看清前路的燈。
+          </p>
+
+          <!-- Core Pillars Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+            <div class="p-4 rounded-2xl bg-cream-100 border border-cream-300">
+              <span class="text-terracotta-600 text-lg font-serif font-bold">01. 理性拆解</span>
+              <p class="text-sm text-warmgray-600 mt-1">外商 10 年經驗，精準剖析問題本質，以商業與招募視角重構職涯策略。</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-cream-100 border border-cream-300">
+              <span class="text-terracotta-600 text-lg font-serif font-bold">02. 溫柔接納</span>
+              <p class="text-sm text-warmgray-600 mt-1">打造安心無批判的對話場域，先好好接住你的焦慮，再一起找到出路。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Focus Audience & Credentials -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <!-- Audience Target Card -->
+          <div class="p-7 rounded-3xl bg-cream-100 border border-cream-300/90 shadow-soft">
+            <h3 class="font-serif text-lg font-bold text-charcoal-900 mb-4 flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-forest-500"></span>
+              我特別能陪伴這樣的你：
+            </h3>
+            <ul class="space-y-3.5 text-sm text-charcoal-800">
+              <li class="flex items-start gap-3">
+                <span class="text-terracotta-600 font-bold">✦</span>
+                <div>
+                  <strong class="text-charcoal-900">文組轉職者：</strong>覺得優勢難以量化，渴望突破低薪或職涯天花板
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-terracotta-600 font-bold">✦</span>
+                <div>
+                  <strong class="text-charcoal-900">業務／行銷／PM：</strong>遭遇職業倦怠，卡在執行細節中看不清未來發展維度
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-terracotta-600 font-bold">✦</span>
+                <div>
+                  <strong class="text-charcoal-900">職場轉換期的女性／媽媽：</strong>在自我實現與家庭責任間擺盪，想重整節奏
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-terracotta-600 font-bold">✦</span>
+                <div>
+                  <strong class="text-charcoal-900">渴望轉職卻躊躇不前者：</strong>想法很多卻沒有章法，缺乏落地執行的行動藍圖
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Credentials / Identity Badges -->
+          <div class="p-6 rounded-3xl bg-terracotta-50/60 border border-terracotta-200">
+            <p class="text-xs uppercase font-semibold text-terracotta-700 tracking-wider mb-3">Professional Milestones</p>
+            <div class="space-y-2.5 text-sm text-charcoal-900">
+              <div class="flex items-center gap-3">
+                <span class="text-base">✨</span>
+                <span>職游 CNC 認證職涯導航諮詢師</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-base">🖱</span>
+                <span>10 年外商職場實戰 ｜ 文組生翻身 FMCG</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-base">🎀</span>
+                <span>陪你梳理 ｜ 轉職策略 · 履歷優化 · 面試技巧</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-base">🎉</span>
+                <span>職涯牌卡共學坊帶領人 ｜ 探索天賦價值</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-base">🎤</span>
+                <span>Podcast 頻道《沒上班電台》創辦主持</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Services Section -->
+  <section id="services" class="py-24 bg-paper relative">
+    <div class="max-w-6xl mx-auto px-6 lg:px-10">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="editorial-tag text-terracotta-600 font-semibold">SERVICES & OFFERINGS</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-charcoal-950 font-bold mt-2 tracking-tight">
+          量身定制的職涯梳理方案
+        </h2>
+        <p class="text-warmgray-600 mt-4 text-base sm:text-lg">
+          從心理底層的心態安定，到現實層面的轉職戰略，提供完整的一站式賦能陪伴。
+        </p>
+      </div>
+
+      <!-- What You Will Gain (Value proposition highlight banner) -->
+      <div class="mb-14 p-6 sm:p-8 rounded-3xl bg-cream-200/90 border border-cream-300">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div class="max-w-sm">
+            <span class="text-xs uppercase font-bold text-terracotta-600 tracking-wider">CLIENT OUTCOMES</span>
+            <h3 class="font-serif text-xl sm:text-2xl font-bold text-charcoal-900 mt-1">每一次對話，都是蛻變的起點</h3>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full md:w-auto">
+            <div class="border-l-2 border-terracotta-500 pl-4">
+              <div class="font-bold text-charcoal-900 text-base">卡關癥結點梳理</div>
+              <div class="text-xs text-warmgray-600 mt-1">看清卡住你的真實心魔與盲點</div>
+            </div>
+            <div class="border-l-2 border-terracotta-500 pl-4">
+              <div class="font-bold text-charcoal-900 text-base">釐清職涯定位與方向</div>
+              <div class="text-xs text-warmgray-600 mt-1">結合天賦與市場價值的清晰定位</div>
+            </div>
+            <div class="border-l-2 border-terracotta-500 pl-4">
+              <div class="font-bold text-charcoal-900 text-base">具體可落實行動計畫</div>
+              <div class="text-xs text-warmgray-600 mt-1">化大目標為今天就能開始的第一步</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Services 4-Card Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Service 1 -->
+        <div class="card-hover p-8 rounded-3xl bg-cream-50 border border-cream-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono font-semibold px-3 py-1 rounded-full bg-terracotta-100 text-terracotta-700">01 / INDIVIDUAL</span>
+              <span class="text-sm text-warmgray-500">60 - 90 mins</span>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-charcoal-950 mb-3">一對一深度職涯諮詢</h3>
+            <p class="text-warmgray-600 text-sm sm:text-base leading-relaxed mb-6">
+              針對現職倦怠、無力感、轉職迷惘或人生階段轉型進行深層梳理。不只討論找工作，更聚焦於「你真正想過的生活」。
+            </p>
+            <ul class="space-y-2.5 text-sm text-charcoal-800 border-t border-cream-200 pt-4">
+              <li class="flex items-center gap-2">
+                <span class="text-terracotta-600">✔</span> 釐清核心價值觀與工作動機
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-terracotta-600">✔</span> 盲點深度剖析與情緒能量調適
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-terracotta-600">✔</span> 擬定短中長期轉職推進路徑
+              </li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-cream-200 flex items-center justify-between">
+            <span class="text-xs text-warmgray-500">線上視訊 / 雙北實體</span>
+            <a href="#contact" class="text-sm font-semibold text-terracotta-600 hover:text-terracotta-700 inline-flex items-center gap-1">
+              預約了解 <span>&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="card-hover p-8 rounded-3xl bg-cream-50 border border-cream-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono font-semibold px-3 py-1 rounded-full bg-cream-200 text-charcoal-800">02 / RESUME</span>
+              <span class="text-sm text-warmgray-500">精準優化</span>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-charcoal-950 mb-3">履歷健檢與優化梳理</h3>
+            <p class="text-warmgray-600 text-sm sm:text-base leading-relaxed mb-6">
+              運用 10 年外商篩選視角，打破流水帳式陳述。教你如何用商業思維重新包裝經歷，讓文組與非本科生的隱性成果閃閃發光。
+            </p>
+            <ul class="space-y-2.5 text-sm text-charcoal-800 border-t border-cream-200 pt-4">
+              <li class="flex items-center gap-2">
+                <span class="text-terracotta-600">✔</span> 經歷亮點提煉與量化數據重塑
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-terracotta-600">✔</span> 針對目標職缺精準度校準 (Tailored)
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-terracotta-600">✔</span> 逐行批註修改與排版美學建議
+              </li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-cream-200 flex items-center justify-between">
+            <span class="text-xs text-warmgray-500">含 1 次對談 + 1 次完稿覆盤</span>
+            <a href="#contact" class="text-sm font-semibold text-terracotta-600 hover:text-terracotta-700 inline-flex items-center gap-1">
+              預約了解 <span>&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="card-hover p-8 rounded-3xl bg-cream-50 border border-cream-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono font-semibold px-3 py-1 rounded-full bg-cream-200 text-charcoal-800">03 / INTERVIEW</span>
+              <span class="text-sm text-warmgray-500">實戰演練</span>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-charcoal-950 mb-3">模擬面試與實戰應對</h3>
+            <p class="text-warmgray-600 text-sm sm:text-base leading-relaxed mb-6">
+              面試不是背答案，而是傳遞「我能為團隊帶來什麼價值」的雙向溝通。透過實戰模擬與即時覆盤，消解緊張感，重塑氣場。
+            </p>
+            <ul class="space-y-2.5 text-sm text-charcoal-800 border-t border-cream-200 pt-4">
+              <li class="flex items-center gap-2">
+                <span class="text-terracotta-600">✔</span> 核心 STAR 故事架構提煉
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-terracotta-600">✔</span> 跨界痛點、空窗期與高難度問題拆解
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-terracotta-600">✔</span> 肢體、語調與面試反問策略訓練
+              </li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-cream-200 flex items-center justify-between">
+            <span class="text-xs text-warmgray-500">真槍實彈 1-on-1 模擬</span>
+            <a href="#contact" class="text-sm font-semibold text-terracotta-600 hover:text-terracotta-700 inline-flex items-center gap-1">
+              預約了解 <span>&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="card-hover p-8 rounded-3xl bg-cream-50 border border-cream-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono font-semibold px-3 py-1 rounded-full bg-forest-500/10 text-forest-600">04 / WORKSHOP</span>
+              <span class="text-sm text-warmgray-500">團體共學</span>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-charcoal-950 mb-3">職涯牌卡探索共學坊</h3>
+            <p class="text-warmgray-600 text-sm sm:text-base leading-relaxed mb-6">
+              以直觀、具體、富有互動性的牌卡引導工具（如價值導航卡、能力探索卡），在團體共學與安全氛圍中，找回久違的天賦熱情。
+            </p>
+            <ul class="space-y-2.5 text-sm text-charcoal-800 border-t border-cream-200 pt-4">
+              <li class="flex items-center gap-2">
+                <span class="text-forest-600">✔</span> 具象化探索隱性優勢與潛藏渴望
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-forest-600">✔</span> 同溫層相互鏡像反饋，化解孤軍奮戰感
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-forest-600">✔</span> 適合企業內訓、社群活動或主題工作坊
+              </li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-cream-200 flex items-center justify-between">
+            <span class="text-xs text-warmgray-500">定期開課 / 企業邀約</span>
+            <a href="#contact" class="text-sm font-semibold text-terracotta-600 hover:text-terracotta-700 inline-flex items-center gap-1">
+              查看近期場次 <span>&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. Process Section -->
+  <section id="process" class="py-24 bg-cream-100 border-y border-cream-300/80 relative">
+    <div class="max-w-6xl mx-auto px-6 lg:px-10">
+      
+      <!-- Section Header -->
+      <div class="max-w-2xl mb-16">
+        <span class="editorial-tag text-terracotta-600 font-semibold">METHODOLOGY & JOURNEY</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-charcoal-950 font-bold mt-2 tracking-tight">
+          踏實清晰的四步導航旅程
+        </h2>
+        <p class="text-warmgray-600 mt-4 text-base sm:text-lg">
+          不講空泛雞湯，我們用結構化引導，讓每一個體悟都能轉化為踩得穩的台階。
+        </p>
+      </div>
+
+      <!-- Process Steps Flow -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+        
+        <!-- Step 1 -->
+        <div class="relative p-6 rounded-3xl bg-cream-50 border border-cream-300 flex flex-col justify-between">
+          <div>
+            <span class="font-serif text-4xl font-bold text-terracotta-200 block mb-3">01</span>
+            <h3 class="font-serif text-lg font-bold text-charcoal-900 mb-2">預約與行前盤點</h3>
+            <p class="text-sm text-warmgray-600 leading-relaxed">
+              填寫預約表單並完成前置盤點問卷。梳理目前的現狀、困惑與最想解決的核心問題，確保諮詢時間被最高效益利用。
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-cream-200 text-xs text-terracotta-600 font-medium">
+            ✦ 行前自我對話
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative p-6 rounded-3xl bg-cream-50 border border-cream-300 flex flex-col justify-between">
+          <div>
+            <span class="font-serif text-4xl font-bold text-terracotta-200 block mb-3">02</span>
+            <h3 class="font-serif text-lg font-bold text-charcoal-900 mb-2">深度對談與盲點聚焦</h3>
+            <p class="text-sm text-warmgray-600 leading-relaxed">
+              透過一對一視訊或實體對話，導入牌卡工具與經驗提煉。溫柔接住你的焦慮，理性抽絲剝繭，找出真正卡住你的核心癥結。
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-cream-200 text-xs text-terracotta-600 font-medium">
+            ✦ 盲點被看見與理解
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative p-6 rounded-3xl bg-cream-50 border border-cream-300 flex flex-col justify-between">
+          <div>
+            <span class="font-serif text-4xl font-bold text-terracotta-200 block mb-3">03</span>
+            <h3 class="font-serif text-lg font-bold text-charcoal-900 mb-2">定位重塑與策略制定</h3>
+            <p class="text-sm text-warmgray-600 leading-relaxed">
+              根據你的特質與外在市場機會，重新定位職場角色。制定轉職策略、履歷面試關鍵亮點與專屬的行動路線圖。
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-cream-200 text-xs text-terracotta-600 font-medium">
+            ✦ 清晰方向與里程碑
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="relative p-6 rounded-3xl bg-cream-50 border border-cream-300 flex flex-col justify-between">
+          <div>
+            <span class="font-serif text-4xl font-bold text-terracotta-200 block mb-3">04</span>
+            <h3 class="font-serif text-lg font-bold text-charcoal-900 mb-2">落地執行與陪伴推進</h3>
+            <p class="text-sm text-warmgray-600 leading-relaxed">
+              將龐大的轉職目標拆解為本週可執行的微行動。諮詢後提供重點摘要與後續追蹤，陪你穩步前進，不再半途而廢。
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-cream-200 text-xs text-terracotta-600 font-medium">
+            ✦ 持續前進的賦能力量
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. Trust & Testimonials Section -->
+  <section id="testimonials" class="py-24 bg-paper relative">
+    <div class="max-w-6xl mx-auto px-6 lg:px-10">
+      
+      <!-- Section Header -->
+      <div class="max-w-2xl mx-auto text-center mb-16">
+        <span class="editorial-tag text-terracotta-600 font-semibold">TESTIMONIALS & VOICES</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-charcoal-950 font-bold mt-2 tracking-tight">
+          學員真心回饋
+        </h2>
+        <p class="text-warmgray-600 mt-4 text-base sm:text-lg">
+          每一段真誠交流，都陪伴著一個靈魂重新找到篤定呼吸的節奏。
+        </p>
+      </div>
+
+      <!-- Testimonial Editorial Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+        
+        <!-- Feedback 1 -->
+        <div class="card-hover p-8 sm:p-10 rounded-3xl bg-cream-50 border border-cream-300 relative">
+          <div class="quote-mark"></div>
+          <div class="relative z-10 space-y-6">
+            <div class="flex items-center gap-1 text-terracotta-600 text-sm">
+              ★★★★★
+            </div>
+            <blockquote class="font-serif text-charcoal-900 text-lg sm:text-xl leading-relaxed italic">
+              「跟你聊天真的很舒服，沒有壓力，特別是聊到最近工作上的不適應，真的覺得有被你接住的感覺～剛才的對話讓我想通一些以前沒注意到的盲點，有了很多新的想法！」
+            </blockquote>
+            <div class="pt-4 border-t border-cream-200 flex items-center justify-between">
+              <div>
+                <p class="font-bold text-charcoal-900 text-sm">行銷企劃 / 轉職評估諮詢學員</p>
+                <p class="text-xs text-warmgray-500 mt-0.5">3 年工作經驗 ｜ 一對一深度諮詢</p>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-cream-200 text-xs text-warmgray-600 font-medium">情緒接納與盲點突破</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feedback 2 -->
+        <div class="card-hover p-8 sm:p-10 rounded-3xl bg-cream-50 border border-cream-300 relative">
+          <div class="quote-mark"></div>
+          <div class="relative z-10 space-y-6">
+            <div class="flex items-center gap-1 text-terracotta-600 text-sm">
+              ★★★★★
+            </div>
+            <blockquote class="font-serif text-charcoal-900 text-lg sm:text-xl leading-relaxed italic">
+              「今天的價值導航卡評測真的讓我滿驚訝的！很多是我以前沒有想過的面向，現在終於懂自己為什麼當初那樣選了！原來那些糾結都是因為跟核心價值觀衝突。」
+            </blockquote>
+            <div class="pt-4 border-t border-cream-200 flex items-center justify-between">
+              <div>
+                <p class="font-bold text-charcoal-900 text-sm">專案經理 (PM) / 牌卡工作坊學員</p>
+                <p class="text-xs text-warmgray-500 mt-0.5">5 年工作經驗 ｜ 職涯牌卡共學</p>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-cream-200 text-xs text-warmgray-600 font-medium">價值觀精準定位</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Credibility Indicators Strip -->
+      <div class="mt-16 p-8 rounded-3xl bg-cream-100 border border-cream-300 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <div class="font-serif text-3xl font-bold text-charcoal-900">10+</div>
+          <div class="text-xs sm:text-sm text-warmgray-600 mt-1">年外商跨領域實戰</div>
+        </div>
+        <div>
+          <div class="font-serif text-3xl font-bold text-terracotta-600">CNC</div>
+          <div class="text-xs sm:text-sm text-warmgray-600 mt-1">職游認證職涯導航師</div>
+        </div>
+        <div>
+          <div class="font-serif text-3xl font-bold text-charcoal-900">100%</div>
+          <div class="text-xs sm:text-sm text-warmgray-600 mt-1">溫暖無批判聆聽承諾</div>
+        </div>
+        <div>
+          <div class="font-serif text-3xl font-bold text-forest-600">Top</div>
+          <div class="text-xs sm:text-sm text-warmgray-600 mt-1">沒上班電台 Podcast</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6. Contact & Action Section -->
+  <section id="contact" class="py-24 bg-cream-50 border-t border-cream-300 relative">
+    <div class="max-w-6xl mx-auto px-6 lg:px-10">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+        
+        <!-- Left Column: Direct Connection & Socials -->
+        <div class="lg:col-span-5 space-y-8">
+          <div>
+            <span class="editorial-tag text-terracotta-600 font-semibold">GET IN TOUCH</span>
+            <h2 class="font-serif text-3xl sm:text-4xl text-charcoal-950 font-bold mt-2 tracking-tight">
+              跨出改變的第一步，<br>我隨時在這裡接住你。
+            </h2>
+            <p class="text-warmgray-600 mt-4 text-base leading-relaxed">
+              任何諮詢需求、合作邀請、工作坊開班或單純想聊聊你的困擾，都歡迎透過以下管道直接聯繫 Tia。
+            </p>
+          </div>
+
+          <!-- Contact Direct Channels -->
+          <div class="space-y-4">
+            
+            <!-- LINE Card with Copy Feature -->
+            <div class="p-5 rounded-2xl bg-cream-100 border border-cream-300 flex items-center justify-between">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-[#06C755]/10 text-[#06C755] flex items-center justify-center font-bold text-xl">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 5.96 2 10.84c0 3.08 1.77 5.79 4.45 7.37-.19.68-.7 2.45-.8 2.82-.12.45.16.44.34.32.24-.16 2.84-1.92 3.98-2.69.66.09 1.34.14 2.03.14 5.52 0 10-3.96 10-8.84S17.52 2 12 2z"/></svg>
+                </div>
+                <div>
+                  <span class="text-xs text-warmgray-500 font-medium block">官方 LINE 帳號</span>
+                  <span class="text-base font-semibold text-charcoal-900">@832nnlkl</span>
+                </div>
+              </div>
+              <button 
+                onclick="copyToClipboard('@832nnlkl', this)" 
+                class="px-3 py-1.5 rounded-lg border border-cream-300 hover:border-warmgray-500 bg-cream-50 text-xs font-medium text-charcoal-800 transition-colors"
+              >
+                複製 ID
+              </button>
+            </div>
+
+            <!-- Email Card with Copy Feature -->
+            <div class="p-5 rounded-2xl bg-cream-100 border border-cream-300 flex items-center justify-between">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-terracotta-100 text-terracotta-600 flex items-center justify-center font-bold">
+                  ✉️
+                </div>
+                <div>
+                  <span class="text-xs text-warmgray-500 font-medium block">電子信箱</span>
+                  <span class="text-base font-semibold text-charcoal-900">tanalee5@gmail.com</span>
+                </div>
+              </div>
+              <button 
+                onclick="copyToClipboard('tanalee5@gmail.com', this)" 
+                class="px-3 py-1.5 rounded-lg border border-cream-300 hover:border-warmgray-500 bg-cream-50 text-xs font-medium text-charcoal-800 transition-colors"
+              >
+                複製 Email
+              </button>
+            </div>
+
+            <!-- Instagram Link -->
+            <a 
+              href="https://instagram.com/tia.careerpath" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="p-5 rounded-2xl bg-cream-100 border border-cream-300 flex items-center justify-between group hover:border-terracotta-300 transition-colors"
+            >
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-pink-500/10 text-pink-600 flex items-center justify-center font-bold">
+                  📸
+                </div>
+                <div>
+                  <span class="text-xs text-warmgray-500 font-medium block">Instagram 職場筆記</span>
+                  <span class="text-base font-semibold text-charcoal-900 group-hover:text-terracotta-600 transition-colors">@tia.careerpath</span>
+                </div>
+              </div>
+              <span class="text-warmgray-400 group-hover:text-terracotta-600 text-sm font-medium">前往追蹤 &rarr;</span>
+            </a>
+
+            <!-- Podcast Link (Updated with Apple Podcasts URL and interactive hover state) -->
+            <a 
+              href="https://podcasts.apple.com/tw/podcast/%E6%B2%92%E4%B8%8A%E7%8F%AD%E9%9B%BB%E5%8F%B0/id1854999564" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="p-5 rounded-2xl bg-cream-100 border border-cream-300 flex items-center justify-between group hover:border-forest-500 hover:bg-cream-50 transition-all shadow-subtle hover:shadow-soft"
+            >
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-forest-500/10 text-forest-600 flex items-center justify-center font-bold text-xl group-hover:scale-110 group-hover:bg-forest-500/20 transition-all">
+                  🎙
+                </div>
+                <div>
+                  <span class="text-xs text-warmgray-500 font-medium block">Podcast 節目</span>
+                  <span class="text-base font-semibold text-charcoal-900 group-hover:text-forest-600 transition-colors">《沒上班電台》</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="hidden sm:inline-block text-xs text-warmgray-500 bg-cream-200 px-2.5 py-1 rounded-full group-hover:bg-forest-500/10 group-hover:text-forest-600 transition-colors">Apple Podcasts</span>
+                <span class="text-xs font-semibold text-forest-600 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform inline-flex items-center gap-1">
+                  前往收聽
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </span>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Consultation Booking Form -->
+        <div class="lg:col-span-7">
+          <div class="p-8 sm:p-10 rounded-3xl bg-cream-100 border border-cream-300 shadow-soft">
+            <h3 class="font-serif text-2xl font-bold text-charcoal-900 mb-2">填寫諮詢預約意向</h3>
+            <p class="text-sm text-warmgray-600 mb-8">
+              留下你的基本資訊與現況，Tia 會在 24 小時內親自透過 Email 或 LINE 與你確認諮詢時段與前置細節。
+            </p>
+
+            <form id="consultForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
+              
+              <!-- Name & Email Row -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="name" class="block text-xs font-semibold text-charcoal-800 uppercase tracking-wider mb-2">你的稱呼 / 姓名 *</label>
+                  <input 
+                    type="text" 
+                    id="name" 
+                    required 
+                    placeholder="例如：林小姐 / Alex" 
+                    class="w-full px-4 py-3 rounded-xl bg-cream-50 border border-cream-300 focus:border-terracotta-500 focus:ring-1 focus:ring-terracotta-500 outline-none text-charcoal-900 placeholder:text-warmgray-400 text-sm transition-all"
+                  />
+                </div>
+                <div>
+                  <label for="email" class="block text-xs font-semibold text-charcoal-800 uppercase tracking-wider mb-2">聯絡 Email *</label>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    required 
+                    placeholder="yourname@example.com" 
+                    class="w-full px-4 py-3 rounded-xl bg-cream-50 border border-cream-300 focus:border-terracotta-500 focus:ring-1 focus:ring-terracotta-500 outline-none text-charcoal-900 placeholder:text-warmgray-400 text-sm transition-all"
+                  />
+                </div>
+              </div>
+
+              <!-- Current Role / Background -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="role" class="block text-xs font-semibold text-charcoal-800 uppercase tracking-wider mb-2">目前職務／身分</label>
+                  <select 
+                    id="role" 
+                    class="w-full px-4 py-3 rounded-xl bg-cream-50 border border-cream-300 focus:border-terracotta-500 focus:ring-1 focus:ring-terracotta-500 outline-none text-charcoal-900 text-sm transition-all"
+                  >
+                    <option value="文組生/轉職初探者">文組生／轉職初探者</option>
+                    <option value="業務/行銷/企劃">業務／行銷／企劃</option>
+                    <option value="PM/專案經理">PM／專案經理</option>
+                    <option value="職場婦女/重返職場者">職場婦女／重返職場者</option>
+                    <option value="其他身分">其他身分</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="serviceType" class="block text-xs font-semibold text-charcoal-800 uppercase tracking-wider mb-2">感興趣的服務方案 *</label>
+                  <select 
+                    id="serviceType" 
+                    required 
+                    class="w-full px-4 py-3 rounded-xl bg-cream-50 border border-cream-300 focus:border-terracotta-500 focus:ring-1 focus:ring-terracotta-500 outline-none text-charcoal-900 text-sm transition-all"
+                  >
+                    <option value="一對一深度職涯諮詢">一對一深度職涯諮詢</option>
+                    <option value="履歷精準健檢與優化">履歷精準健檢與優化</option>
+                    <option value="模擬面試與實戰應對">模擬面試與實戰應對</option>
+                    <option value="職涯牌卡共學工作坊">職涯牌卡共學工作坊</option>
+                    <option value="企業合作/演講邀約">企業合作／演講邀約</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Pain Points / Challenge -->
+              <div>
+                <label for="message" class="block text-xs font-semibold text-charcoal-800 uppercase tracking-wider mb-2">
+                  目前面臨的職涯卡關點或期望獲得的協助
+                </label>
+                <textarea 
+                  id="message" 
+                  rows="4" 
+                  placeholder="例如：目前在行銷崗位第 3 年感到倦怠，想轉往專案管理但不知道如何整理履歷，希望能釐清下一步方向..." 
+                  class="w-full px-4 py-3 rounded-xl bg-cream-50 border border-cream-300 focus:border-terracotta-500 focus:ring-1 focus:ring-terracotta-500 outline-none text-charcoal-900 placeholder:text-warmgray-400 text-sm transition-all"
+                ></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button 
+                type="submit" 
+                id="submitBtn"
+                class="w-full py-4 rounded-xl bg-charcoal-900 hover:bg-terracotta-600 text-cream-50 font-medium text-sm sm:text-base tracking-wide transition-all shadow-subtle hover:shadow-soft"
+              >
+                送出預約申請 ✦
+              </button>
+
+              <!-- Interactive Feedback Message Container (No alert) -->
+              <div id="formFeedback" class="hidden p-4 rounded-xl text-sm transition-all"></div>
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-charcoal-950 text-cream-200 py-16 border-t border-charcoal-800">
+    <div class="max-w-6xl mx-auto px-6 lg:px-10">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-12 border-b border-charcoal-800/80">
+        <div>
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-full bg-terracotta-700 text-cream-50 flex items-center justify-center font-serif text-sm font-bold">T</span>
+            <span class="font-serif text-xl font-bold tracking-tight text-cream-50">Tia.careerpath</span>
+          </div>
+          <p class="text-xs text-warmgray-400 mt-2 max-w-sm">
+            職游 CNC 職涯導航諮詢師 ｜ 10 年外商實戰 ｜ 理性梳理 × 溫柔陪伴
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-6 text-xs text-warmgray-400">
+          <a href="#about" class="hover:text-cream-50 transition-colors">關於 Tia</a>
+          <a href="#services" class="hover:text-cream-50 transition-colors">諮詢服務</a>
+          <a href="#process" class="hover:text-cream-50 transition-colors">引導流程</a>
+          <a href="#testimonials" class="hover:text-cream-50 transition-colors">學員心得</a>
+          <a href="#contact" class="hover:text-cream-50 transition-colors">預約聯絡</a>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-warmgray-500">
+        <p>© 2026 Tia Career Consulting. All rights reserved.</p>
+        <p>Designed with Editorial Warmth & Human Care.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Toast Notification Box for Copy Action (No alert) -->
+  <div id="toastNotification" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-charcoal-900 text-cream-50 px-5 py-3 rounded-full text-xs font-medium shadow-elevated flex items-center gap-2 pointer-events-none">
+    <span class="text-terracotta-500">✓</span>
+    <span id="toastText">已複製到剪貼簿</span>
+  </div>
+
+  <script>
+    // 1. Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const hamburgerIcon = document.getElementById('hamburgerIcon');
+    const closeIcon = document.getElementById('closeIcon');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      if (isOpen) {
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      } else {
+        mobileMenu.classList.remove('hidden');
+        hamburgerIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+      }
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      });
+    });
+
+    // 2. Clipboard Copy Helper (Using execCommand fallback safe for iframes)
+    function copyToClipboard(text, buttonElement) {
+      const tempTextArea = document.createElement('textarea');
+      tempTextArea.value = text;
+      tempTextArea.style.position = 'fixed';
+      tempTextArea.style.left = '-9999px';
+      tempTextArea.style.top = '0';
+      document.body.appendChild(tempTextArea);
+      tempTextArea.focus();
+      tempTextArea.select();
+
+      try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+          showToast(`已成功複製：${text}`);
+        } else {
+          showToast(`請手動複製：${text}`);
+        }
+      } catch (err) {
+        showToast(`請手動複製：${text}`);
+      } finally {
+        document.body.removeChild(tempTextArea);
+      }
+    }
+
+    // 3. Floating Toast Display
+    function showToast(message) {
+      const toast = document.getElementById('toastNotification');
+      const toastText = document.getElementById('toastText');
+      toastText.innerText = message;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 2500);
+    }
+
+    // 4. Form Submission Handler with In-UI Feedback (No alert)
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      
+      const submitBtn = document.getElementById('submitBtn');
+      const formFeedback = document.getElementById('formFeedback');
+      const name = document.getElementById('name').value;
+      const serviceType = document.getElementById('serviceType').value;
+
+      // Loading state
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `
+        <span class="inline-flex items-center gap-2">
+          <svg class="animate-spin h-4 w-4 text-cream-50" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+          資料處理中...
+        </span>
+      `;
+
+      // Simulated network dispatch
+      setTimeout(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = `送出預約申請 ✦`;
+
+        // Success Box Rendering
+        formFeedback.className = "p-5 rounded-2xl bg-forest-500/10 border border-forest-500/30 text-forest-700 text-sm leading-relaxed";
+        formFeedback.innerHTML = `
+          <div class="flex items-start gap-3">
+            <span class="text-base font-bold text-forest-600">✓</span>
+            <div>
+              <p class="font-bold text-charcoal-900">謝謝你，${name}！諮詢意向已收到。</p>
+              <p class="text-warmgray-600 mt-1">
+                Tia 已收到你關於「${serviceType}」的需求。預計將於 24 小時內透過 Email 或 LINE 與你確認時段與行前問卷！
+              </p>
+            </div>
+          </div>
+        `;
+        formFeedback.classList.remove('hidden');
+
+        // Reset inputs
+        document.getElementById('consultForm').reset();
+      }, 800);
+    }
+  </script>
+</body>
+</html>
